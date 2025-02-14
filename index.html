@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Web Page</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- FontAwesome for icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    .navbar-brand img {
+      height: 50px;
+      max-width: 100%;
+    }
+    .banner {
+      margin: 30px auto;
+      max-width: 85%;
+      position: relative;
+      text-align: left;
+      color: white;
+    }
+    .banner img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .banner-text {
+      position: absolute;
+      top: 10%;
+      left: 5%;
+      padding: 15px;
+      border-radius: 8px;
+    }
+    .banner-text h1 {
+      font-size: 3.5rem;
+      font-weight: bold;
+      color: yellow;
+    }
+    .banner-text p {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: white;
+    }
+    /* Footer Styling */
+    .footer {
+      background: #333;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+    .footer a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+    }
+    .footer a:hover {
+      color: #FFD700;
+    }
+    /* Mobile Adjustments */
+    @media (max-width: 768px) {
+      .banner {
+        max-width: 100%;
+      }
+      .banner-text {
+        top: 5%;
+        left: 5%;
+        padding: 10px;
+      }
+      .banner-text h1 {
+        font-size: 2rem;
+      }
+      .banner-text p {
+        font-size: 1rem;
+      }
+      .footer a {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="assets/logo-removebg-preview.png" alt="Logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#">HOME</a></li>
+          <li class="nav-item"><a class="nav-link" href="pages/team.html">Team</a></li>
+          <!-- Contact Us now scrolls to the footer -->
+          <li class="nav-item"><a class="nav-link" href="#footer">Contact Us</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown">
+              Services
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="pages/residential.html">Residential</a></li>
+              <li><a class="dropdown-item" href="pages/commercial.html">Commercial</a></li>
+              <li><a class="dropdown-item" href="pages/infrastructural.html">Infrastructural</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Banner Section -->
+  <section class="banner">
+    <img src="assets/banner.jpg" class="img-fluid w-100" alt="Banner Image">
+    <div class="banner-text">
+      <h1>SR Artech Designing Solution</h1>
+      <p>Bringing Your Vision to Life – Expert 2D & 3D Design Solutions</p>
+    </div>
+  </section>
+
+  <!-- Cards Section -->
+  <div class="container mt-5">
+    <div class="row">
+      <!-- Residential Card -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card">
+          <img src="assets/res.jpg" class="card-img-top" alt="Residential Design">
+          <div class="card-body">
+            <h5 class="card-title">RESIDENTIAL DESIGN</h5>
+            <ul>
+              <li>Apartments & Flats</li>
+              <li>Independent Houses</li>
+              <li>Farmhouses</li>
+              <li>Luxury Mansions</li>
+            </ul>
+            <a href="pages/residential.html" class="btn btn-dark mt-2">Know More</a>
+          </div>
+        </div>
+      </div>
+      <!-- Commercial Card -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card">
+          <img src="assets/com.jpg" class="card-img-top" alt="Commercial Design">
+          <div class="card-body">
+            <h5 class="card-title">COMMERCIAL DESIGN</h5>
+            <ul>
+              <li>Retail Complex & Malls</li>
+              <li>Hotels & Hospitality</li>
+              <li>Educational Institutions</li>
+              <li>Office Buildings</li>
+            </ul>
+            <a href="pages/commercial.html" class="btn btn-dark mt-2">Know More</a>
+          </div>
+        </div>
+      </div>
+      <!-- Infrastructure Card -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card">
+          <img src="assets/infra.jpeg" class="card-img-top" alt="Infrastructure Design">
+          <div class="card-body">
+            <h5 class="card-title">INFRASTRUCTURE DESIGN</h5>
+            <ul>
+              <li>Water Infrastructure</li>
+              <li>Telecom Infrastructure</li>
+              <li>Transportation Infrastructure</li>
+              <li>Power & Energy Infrastructure</li>
+            </ul>
+            <a href="pages/infrastructural.html" class="btn btn-dark mt-2">Know More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <footer id="footer" class="footer mt-5">
+    <div class="container">
+      <p>Contact Us:</p>
+      <div class="d-flex justify-content-evenly">
+        <a href="tel:9351225371">
+          <i class="fas fa-phone"></i> 9351225371
+        </a>
+        <a href="https://wa.me/9351225371" target="_blank">
+          <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+        <a href="mailto:sratechdesigsoluntion@gmail.com">
+          <i class="fas fa-envelope"></i> sratechdesigsoluntion@gmail.com
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap Script -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
